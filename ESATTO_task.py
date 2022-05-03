@@ -2,19 +2,19 @@ from datetime import date
 import sys
 today = date.today()
     
-class Pracownicy:
+class Employees:
     
-    def __init__(self,employees_list, ID_list, adress_list, data_list):
+    def __init__(self,employees_list, ID_list, address_list, data_list):
         self.employees_list = employees_list
         self.ID_list = ID_list
-        self.adress_list = adress_list
+        self.address_list = address_list
         self.data_list = data_list
         
     def show_avaliable_employees(self):
         if len(self.employees_list) > 0:
             print('\nEmployees are: ')
-            for employee, ID, adress, data in zip(self.employees_list, self.ID_list, self.adress_list, self.data_list):
-                print(f'Name: {employee}, ID: {ID}, adress: {adress}, date added to list: {data}')
+            for employee, ID, address, data in zip(self.employees_list, self.ID_list, self.address_list, self.data_list):
+                print(f'Name: {employee}, ID: {ID}, address: {address}, date added to list: {data}')
                 print(80*'-')
         else:
             print('Employee list is empty.')
@@ -34,8 +34,8 @@ class Pracownicy:
             else:
                 print('ID number must be a number.')
             
-        self.employee_adress = input('Type employee adress:>>> ').lower().title()
-        self.adress_list.append(self.employee_adress)
+        self.employee_address = input('Type employee address:>>> ').lower().title()
+        self.address_list.append(self.employee_address)
         self.added_date = today.strftime("%d/%m/%Y")
         self.data_list.append(self.added_date)
     
@@ -46,7 +46,7 @@ class Pracownicy:
                 employee_index = self.ID_list.index(self.ID_number)
                 self.ID_list.remove(self.ID_number)
                 del self.employees_list[employee_index]
-                del self.adress_list[employee_index]
+                del self.address_list[employee_index]
                 del self.data_list[employee_index]
                  
             else:
@@ -60,7 +60,7 @@ class Pracownicy:
             print('''\nType which atribute you would like to edit:\n
                   1 - Name
                   2 - ID
-                  3 - Adress
+                  3 - address
                   ''')
         
             what_to_edit = int(input())
@@ -80,8 +80,8 @@ class Pracownicy:
                     else:
                         print('ID number must be a number.')
             elif what_to_edit == 3:
-                self.new_adress = input('Type new adress:>>> ')
-                self.adress_list[self.ID_list.index(self.ID_number)] = self.new_adress
+                self.new_address = input('Type new address:>>> ')
+                self.address_list[self.ID_list.index(self.ID_number)] = self.new_address
         else:
             print('There is no employee with this ID number\n')
             
@@ -89,10 +89,10 @@ class Pracownicy:
 
 name_list = []
 ID_list = []
-adress_list = []
+address_list = []
 data_list = []
 
-employees = Pracownicy(name_list, ID_list, adress_list, data_list)
+employees = Employees(name_list, ID_list, address_list, data_list)
 number_of_employees = int(input('There is no employees on the list, type as a number how many employees you would like to add:>>> '))
 
 for i in range(1, number_of_employees+1):
@@ -111,8 +111,8 @@ for i in range(1, number_of_employees+1):
         else:
             print('ID number must be a number.')
             
-    employee_adress = input((f'Type an adress of the {i} employee:>>> ')).lower().title()
-    adress_list += [employee_adress]
+    employee_address = input((f'Type an address of the {i} employee:>>> ')).lower().title()
+    address_list += [employee_address]
             
     added_date = today.strftime("%d/%m/%Y")
     data_list += [added_date]
