@@ -1,6 +1,6 @@
 # ESATTO
 
-These excercise is a console application.\
+That excercise is a console application.\
 To open this app you need to clone this repo using this command: \
 ```git clone git@github.com:schraed/ESATTO.git``` \
 then double click on ESATTO_task.py file to open it in terminal \
