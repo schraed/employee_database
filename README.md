@@ -1,4 +1,13 @@
-# ESATTO
+Functional requirements:
+•         Add a customer,
+•         Edit customer,
+•         Delete customer,
+•         List customers,
+•         Customer properties should at least contain:
+o         Name, 
+o         VAT identification number, 
+o         Creation date, 
+o         Address
 
 This excercise is a console application.\
 To open this app you need to clone this repo using this command: \
