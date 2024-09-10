@@ -1,24 +1,24 @@
-Functional requirements:
-•         Add a customer,
-•         Edit customer,
-•         Delete customer,
-•         List customers,
-•         Customer properties should at least contain:
-o         Name, 
-o         VAT identification number, 
-o         Creation date, 
-o         Address
+# Customer Management Console Application
 
-This excercise is a console application.\
-To open this app you need to clone this repo using this command: \
-```git clone git@github.com:schraed/employee_database.git``` \
-then double click on ESATTO_task.py file to open it in terminal \
-if it doesnt work or if you would like to open it in code editor, download python extension and run it with this command: \
-```python ESATTO_task.py```
+This is a simple console-based Python application for managing customer information. The app supports basic CRUD operations (Create, Read, Update, Delete) for customer data, such as name, VAT identification number, creation date, and address.
 
+## Features
 
+- **Add Customer**: Create a new customer record.
+- **Edit Customer**: Update existing customer information.
+- **Delete Customer**: Remove a customer.
+- **List Customers**: Display all stored customers.
 
+### Customer Properties
 
+Each customer has the following properties:
+- **Name**
+- **VAT Identification Number**
+- **Creation Date**
+- **Address**
 
+## Setup
 
-
+1. Clone the repository:
+   ```bash
+   git clone git@github.com:schraed/employee_database.git
